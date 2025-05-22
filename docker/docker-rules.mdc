@@ -1,0 +1,13 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+- Use multi-stage builds to separate build-time dependencies from runtime environments.
+- Avoid using `latest` tag for base images. Pin to specific versions for reproducibility.
+- Use `.dockerignore` to exclude unnecessary files from context (e.g., `node_modules`, `.git`, build artifacts).
+- Set `WORKDIR` to provide a clear working directory structure.
+- Provide default `CMD` or `ENTRYPOINT` for containers with expected behavior.
+- Avoid hardcoding secrets, credentials, or tokens in Dockerfiles. Use environment variables or secrets management tools.
+- Always use official base images when available. Prefer slim or alpine variants for minimal attack surface unless full distributions are necessary.
+
